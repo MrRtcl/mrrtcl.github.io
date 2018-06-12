@@ -106,6 +106,10 @@ friends: [
     {
         titie: "Crazy's Blog",
         href: "http://www.cra2y.cn"
+    },
+    {
+        title: "A-'s Blog'",
+        href: "http://www.e-wolf.top"
     }
 ]
 
