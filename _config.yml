@@ -102,6 +102,10 @@ friends: [
     {
         title: "iosmosis's Blog",
         href: "https://iosmosis.github.io/"
+    },
+    {
+        titie: "Crazy's Blog",
+        href: "http://www.cra2y.cn"
     }
 ]
 
