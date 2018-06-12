@@ -98,6 +98,10 @@ friends: [
     {
         title: "lyt's Blog",
         href: "https://blog.baka.pw/"
+    },
+    {
+        title: "iosmosis's Blog",
+        href: "https://iosmosis.github.io/"
     }
 ]
 
