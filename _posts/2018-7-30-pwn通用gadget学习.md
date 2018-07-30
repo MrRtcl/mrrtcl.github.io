@@ -12,7 +12,7 @@ tags:								# 标签
 ---
 
 # PWN,__libc_csu_init通用gadget学习
->例题下载:[蒸米level5](/files/pwn/level5)
+>例题下载:[蒸米level5](/files/pwn/level5.level)
 
 __libc_csu_init函数是在libc初始化的时候用到的函数,所以在使用libc的文件中都会出现他  
   
