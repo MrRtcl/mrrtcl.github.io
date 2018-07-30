@@ -8,7 +8,6 @@ author:     Mr.R 					# 作者
 catalog: true 						# 是否归档
 tags:								# 标签
     - CTF
-    - PWN
 ---
 
 # PWN,__libc_csu_init通用gadget学习
