@@ -1,8 +1,8 @@
 ---
 layout:     post   				    # 使用的布局（不需要改）
-title:      pwn__libc_csu_init通用gadget学习 		 # 标题 
-subtitle:   pwn_libc_csu_init               # 副标题
-date:       2018-07-15 				# 时间
+title:      PWN通用gadget学习 		 # 标题 
+subtitle:   __libc_csu_init               # 副标题
+date:       2018-07-30 				# 时间
 author:     Mr.R 					# 作者
 # header-img: img/post-bg-2015.jpg 	# 这篇文章标题背景图片
 catalog: true 						# 是否归档
