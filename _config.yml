@@ -114,6 +114,14 @@ friends: [
     {   
         title: "fkgeek",
         href: "http://www.fkgeek.com/"
+    },
+    {
+        title: "Shq's Blog",
+        href: "https://blog.ishq.site",
+    },
+    {
+        title: "ShawnZhou's Blog",
+        href: "http://www.shawnzhou.xyz"
     }
 ]
 
