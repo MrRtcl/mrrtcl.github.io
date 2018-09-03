@@ -1,7 +1,7 @@
 ---
 layout:     post   				    # 使用的布局（不需要改）
-title:      西电网信杯线下wp 		 # 标题 
-subtitle:   西电网信杯               # 副标题
+title:      Unlink笔记&2014 HITCON stkof题解 		 # 标题 
+subtitle:   Unlink笔记&2014 HITCON stkof题解               # 副标题
 date:       2018-09-03 				# 时间
 author:     Mr.R 					# 作者
 # header-img: img/post-bg-2015.jpg 	# 这篇文章标题背景图片
