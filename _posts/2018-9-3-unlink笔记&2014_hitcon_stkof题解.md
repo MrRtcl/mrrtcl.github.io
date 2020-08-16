@@ -28,7 +28,7 @@ unlink的主要操作其实就是一个双向链表的删除
 void unlink(*p){
     FD = p->fd;
     BK = p->bk;
-    if(FD->bk == p && BK->fd == p){		//古老的unlink是没有这个判断的,所以可以配合shellcode直接任意执行
+    if(FD->bk == p && BK->fd == p){		//古老的unlink是没有这个判断的,所以可以任意地址写
         FD->bk = BK;
         BK->fd = FD;
     }
@@ -58,21 +58,25 @@ next->fd = next-0x18/12
 next->bk = next-0x10/8
 ```
 
+结合heapbase的布局
+
+![image-20200816234938203](https://tva1.sinaimg.cn/large/007S8ZIlgy1ght39z45ouj30km0mi3zo.jpg)
+
 就可以满足以下操作
 
 ```
-FD = P->fd = P-0x18/12
-BK = P->bk = P-0x10/8
-FD->bk = FD+0x18/12 = P-0x18/12+0x18/12 = P
-BK->fd = BK+0x10/8 = P-0x10/8+0x10/8 = P
+FD = P->fd = *(P-0x18/12) = A-0x1812
+BK = P->bk = *(P-0x10/8) = A-0x10/8
+FD->bk = *(FD+0x18/12) = *(A-0x18/12+0x18/12) = *A = P
+BK->fd = *(BK+0x10/8) = *(A-0x10/8+0x10/8) = *A = P
 
-FD->bk = BK -------> P = P-0x10/8
-BK->fd = FD -------> P = P-0x18/12
+FD->bk = BK -------> *A = A-0x10/8
+BK->fd = FD -------> *A = A-0x18/12
 
-P = P-0x18/12
+*A = A-0x18/12
 ```
 
-即最终在满足判断的情况下,使的指针降低了0x18/12位(由64/32位系统决定)
+即最终在满足判断的情况下,使heapbase中存放的指针变为了A-0x18/12(由64/32位系统决定)
 
 ## 题目分析
 
