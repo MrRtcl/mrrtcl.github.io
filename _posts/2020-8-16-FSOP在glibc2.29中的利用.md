@@ -26,9 +26,9 @@ tags:								# 标签
 具体用法:
 
 ```
-chunk0 = malloc(0x500)#0
+chunk0 = malloc(0x450)#0
 malloc(0x10)#1
-chunk1 = malloc(0x450)#2
+chunk1 = malloc(0x420)#2
 malloc(0x10)#3
 free(chunk0)
 malloc(0x600)		//将chunk0放入large bin
