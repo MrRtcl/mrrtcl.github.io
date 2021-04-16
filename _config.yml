@@ -111,14 +111,6 @@ friends: [
         title: "A-'s Blog'",
         href: "http://www.e-wolf.top"
     },
-    {   
-        title: "fkgeek",
-        href: "http://www.fkgeek.com/"
-    },
-    {
-        title: "Shq's Blog",
-        href: "https://blog.ishq.site",
-    },
     {
         title: "ShawnZhou's Blog",
         href: "http://www.shawnzhou.xyz"
@@ -130,6 +122,14 @@ friends: [
     {
         titie: "5k1L's Blog",
         href: "http://blog.5k1l.club"
+    },
+    {
+        title: "鑫鑫tql",
+        href: "https://panda0s.top/"
+    },
+    {
+        title: "Minhal Minhal",
+        href: "https://minhal.me/"
     }
 ]
 
